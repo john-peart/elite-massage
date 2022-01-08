@@ -84,8 +84,12 @@ a:hover, a:active, a:focus {
 }
 
 /**************************************************************************************
-*   HEADER STYLING
+*   FONT AND HEADER STYLING
 ***************************************************************************************/
+.text-muted{
+    color:#cccccc!important;
+}
+
 .section-heading {    
     width: 100%;
     clear: both;
@@ -142,18 +146,6 @@ div.navbar {
     z-index: 1030;
 }
 
-div.navbar:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 200px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.5);
-    left: 50%;
-    margin-left: -100px;
-    bottom: 0;
-}
-
 div.navbar a {
     color: rgba(255, 255, 255, 0.8);
 }
@@ -177,6 +169,20 @@ div.navbar a {
 
     div.navbar a {
         color: #52d3aa;
+    }
+
+}
+@media screen and (min-width: 576px) {
+    div.navbar:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 200px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.5);
+        left: 50%;
+        margin-left: -100px;
+        bottom: 0;
     }
 }
 
@@ -281,6 +287,18 @@ div.navbar a {
 /*****************************************************************************************
 *    HOME SECTION STYLING
 ********************************************************************************************/
+img.logo{
+    
+    padding-bottom: 50px;
+}
+
+@media screen and (min-width: 576px) {
+    img.logo{
+        padding-top:50px;
+        max-width: 90%;
+    }
+}
+
 section#home {
     background: repeating-linear-gradient(to bottom right, rgba(63, 149, 234, 0.7) 0%, rgba(82, 211, 170,0.7) 100%), url('../images/banner_full.jpg') no-repeat;
     background-size: cover;
@@ -300,16 +318,16 @@ section#home .text-wrap {
 }
 
 section#home h1 {
-    font-size: 8rem;
+    font-size: 5rem;
     line-height: 0.8;
     padding-bottom: 50px;
-    font-weight: 700;
-    font-family: 'Tangerine', cursive;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
 }
 
 @media screen and (max-width: 576px) {
     section#home h1 {
-        font-size: 6rem;
+        font-size: 2rem;
     }
 }
 
@@ -328,6 +346,18 @@ section#home h1 {
     #callouts .row {
         padding-left: 100px;
         padding-right: 100px;
+    }
+
+    div.navbar:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 200px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.5);
+        left: 50%;
+        margin-left: -100px;
+        bottom: 0;
     }
 }
 /**********************************************************************************************
@@ -368,8 +398,9 @@ section#home h1 {
 *   OUR STAFF - SECTION STYLING
 ***********************************************************************************************/
 
-#ourstaff {
+#bio {
     padding-bottom: 75px;
+    padding-top:75px;
     position: relative;
     font-size: 1.25em;
     color: rgba(255, 255, 255, 0.8);
@@ -377,22 +408,30 @@ section#home h1 {
     background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
 }
 
-#ourstaff h2.section-heading {
+#bio h2.section-heading {
     color: #fff;
 }
 
-    #ourstaff h2.section-heading:after {
+#bio h2.section-heading:after {
     background: rgba(255, 255, 255, 0.3);
 }
 
-#ourstaff h2.staff-name {
+#bio h2.staff-name {
     padding-top: 3rem;
 }
 
-#ourstaff span.staff-designation {
-    font-size: 1.5rem;
+#bio span.staff-designation {
+    font-size: 2rem;
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+img.circle-portrait{
+    border-radius: 50%;
+    max-width: 75%;
+    box-shadow: 5px 5px 45px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 5px 5px 45px rgba(0, 0, 0, 0.5)  ; 
+	-moz-box-shadow: 5px 5px 45px rgba(0, 0, 0, 0.5)  ; 
 }
 
 /**********************************************************************************************
@@ -401,7 +440,7 @@ section#home h1 {
 
 #contactus {
     font-size: 1.25rem;
-    background: repeating-linear-gradient(to bottom right, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255,0.90) 100%), url('../images/storefront_full.jpg') no-repeat;
+    background: repeating-linear-gradient(to bottom right, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255,0.90) 100%), url('../images/treatment_room.jpg') no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
