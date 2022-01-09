@@ -102,7 +102,7 @@ h2.section-heading {
     text-transform: uppercase;
     position: relative;
     display: block;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     padding-top: 70px;
     line-height: 1.5;
 }
@@ -411,8 +411,6 @@ section#services div.container
 ***********************************************************************************************/
 
 #bio {
-    padding-bottom: 75px;
-    padding-top:75px;
     position: relative;
     font-size: 1.25em;
     color: rgba(255, 255, 255, 0.8);
