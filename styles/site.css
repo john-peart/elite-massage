@@ -154,7 +154,7 @@ div.navbar a {
     font-size: 1.25rem;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .nav {
         display: block;
     }
@@ -172,7 +172,7 @@ div.navbar a {
     }
 
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
     div.navbar:after {
         content: "";
         position: absolute;
@@ -292,7 +292,7 @@ img.logo{
     padding-bottom: 50px;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
     img.logo{
         padding-top:50px;
         max-width: 90%;
@@ -304,17 +304,18 @@ section#home {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 115px;
+
 }
 
 section#home .container {
-    padding-top: 100px;
+    height: calc(100vh + 3vw);
+    padding-top: -3vw;
 }
 
 section#home .text-wrap {
     z-index: 4;
-    position: relative;
-    text-align: center
+    text-align: center;
+    margin-top:-3vw;
 }
 
 section#home h1 {
@@ -325,7 +326,7 @@ section#home h1 {
     font-family: 'Raleway', sans-serif;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     section#home h1 {
         font-size: 2rem;
     }
@@ -363,6 +364,17 @@ section#home h1 {
 /**********************************************************************************************
 *   SERVICES - SECTION STYLING
 ***********************************************************************************************/
+section#services {
+    background: repeating-linear-gradient(to bottom right, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255,0.90) 100%), url('../images/cherry-blossoms.jpg') no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 115px;
+}
+section#services div.container
+{
+    padding-top: 80px;
+}
 
 #services ul {
     padding-top: 2rem;
