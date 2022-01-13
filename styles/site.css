@@ -37,14 +37,14 @@ section {
 *   BUTTON STYLING
 ***************************************************************************************/
 a {
-    color: #52d3aa;
+    color: rgba(73, 180, 203, 1);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 a:hover, a:active, a:focus {
-    color: #52d3aa;
+    color: rgba(3, 57, 108, 1);
     outline: none;
 }
 
@@ -150,8 +150,19 @@ div.navbar a {
     color: rgba(255, 255, 255, 0.8);
 }
 
+div.navbar.dark a {
+    color: rgba(3, 57, 108, 1);
+}
+
 .nav-link {
     font-size: 1.25rem;
+}
+
+div.logo-sm{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -168,7 +179,11 @@ div.navbar a {
     }
 
     div.navbar a {
-        color: #52d3aa;
+        color: rgba(3, 57, 108, 1);
+    }
+
+    #navLinks.show{
+        box-shadow: 0 4px 4px -2px rgba(0,0,0,0.2);
     }
 
 }
@@ -177,17 +192,39 @@ div.navbar a {
         content: "";
         position: absolute;
         display: block;
-        width: 200px;
+        width: 300px;
         height: 2px;
         background: rgba(255, 255, 255, 0.5);
         left: 50%;
-        margin-left: -100px;
+        margin-left: -150px;
         bottom: 0;
+    }
+
+    div.navbar.dark::after{
+        background:  rgba(3, 57, 108, 1);
+    }
+
+    div.logo-sm{
+        margin-left:-300px
     }
 }
 
-.navbar-toggler:active, .navbar-toggler:focus {
+
+
+@media screen and (min-width: 768px) {
+}
+
+div.navbar.dark .navbar-toggler{
+    color:rgba(3, 57, 108, 1)!important;
+}
+
+.navbar-toggler,.navbar-toggler:active, .navbar-toggler:focus {
     border-color: transparent !important;
+    border:none !important;    
+}
+
+button.navbar-toggler:focus{
+    outline: 0px;
 }
 
 /* NAV HIGHLIGHTS - https://tympanus.net/Development/CreativeLinkEffects/ */
@@ -220,6 +257,9 @@ div.navbar a {
 
 .bg-blue5 {
     background-color: #b3cde0;
+}
+.bg-gradient{
+    background: repeating-linear-gradient(to bottom right, rgba(63, 149, 234, 0.7) 0%, rgba(82, 211, 170,0.7) 100%);
 }
 
 /*****************************************************************************************
@@ -287,6 +327,18 @@ div.navbar a {
 /*****************************************************************************************
 *    HOME SECTION STYLING
 ********************************************************************************************/
+div.logo-sm img{
+    height: 50px;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 10px;
+    z-index: 0;
+    opacity: 0.75;
+}
+
 img.logo{
     
     padding-bottom: 50px;
@@ -407,7 +459,7 @@ section#services div.container
 }
 
 /**********************************************************************************************
-*   OUR STAFF - SECTION STYLING
+*   BIO - SECTION STYLING
 ***********************************************************************************************/
 
 #bio {
@@ -450,14 +502,14 @@ img.circle-portrait{
 
 #contactus {
     font-size: 1.25rem;
-    background: repeating-linear-gradient(to bottom right, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255,0.90) 100%), url('../images/treatment_room.jpg') no-repeat;
+    background: repeating-linear-gradient(to bottom right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255,1) 100%), url('../images/treatment_room.jpg') no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #contactus div#contactinfo i {
-    color: #52d3aa;
+    color: rgba(73, 180, 203, 1);
     padding-right:.5rem;
 }
 
@@ -473,4 +525,21 @@ img.circle-portrait{
     padding-right: 1rem;
     color: #a4a4a4;
     font-weight: 500;
+}
+
+
+/**********************************************************************************************
+*   CORONA VIRUS - SECTION STYLING
+***********************************************************************************************/
+section#covid-19{
+    height: 100vh;
+    background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 100%), url('../images/bg-cv-19-sm.jpg') no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+section#covid-19 .card-body{
+    font-size: 1.25em;;
 }
