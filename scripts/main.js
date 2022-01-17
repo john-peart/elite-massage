@@ -6,18 +6,9 @@
 
     // Window Scroll
     var windowScroll = function () {
-        //$(window).scroll(function (event) {
-
-        //    var header = $('#navWrapper'),
-        //    scrlTop = $(this).scrollTop();
-
-        //    if (scrlTop > 50) {
-        //        header.removeClass('bg-white10').addClass('bg-white100');
-        //    } else {
-        //        header.removeClass('bg-white100').addClass('bg-white10');
-        //    }
-
-        //});
+        $(document).scroll(function() {
+            $('#home').css('background-position', 'center ' + $(document).scrollTop() + 'px');
+        });
     };
 
     var homeAnimate = function () {
@@ -148,8 +139,8 @@
     // Document on load.
     $(function () {
 
-
-        //windowScroll();
+        //fix for mobile issue with fixed background position
+        windowScroll();
 
         // Animations
         homeAnimate();
