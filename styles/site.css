@@ -347,8 +347,8 @@ div.logo-sm img{
       transform: scale3d(.95, .95, .95);
     }
   
-    50% {
-      opacity: 1;
+    100%{
+        opacity: 1;
     }
   }
 
