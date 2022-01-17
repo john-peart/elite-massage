@@ -340,9 +340,32 @@ div.logo-sm img{
     opacity: 0.75;
 }
 
+@keyframes zoomInSmall {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(.95 .95, .95);
+      transform: scale3d(.95, .95, .95);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+
+.zoomInSmall
+{
+    animation-name: zoomInSmall;
+    animation-duration: 1.5s;
+}
+
 img.logo{
-    
     padding-bottom: 50px;
+}
+
+
+
+section#home a.btn{
+    animation-duration:5s;
 }
 
 @media screen and (min-width: 768px) {

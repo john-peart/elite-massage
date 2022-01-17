@@ -29,14 +29,25 @@
 
 
                     setTimeout(function () {
-                        $('#home .to-animate').each(function (k) {
+                        //main logo
+                        $('#home img.logo').each(function (k){
+                            var el = $(this);
+                            
+                            setTimeout(function () {
+                                el.addClass('zoomInSmall animated').removeClass("to-animate");
+                            }, k * 200, 'easeInOutExpo');
+                        });
+
+                        //call to action button
+                        $('#home a.btn').each(function (k) {
                             var el = $(this);
 
                             setTimeout(function () {
-                                el.addClass('zoomIn animated').removeClass("to-animate");
+                                el.addClass('fadeIn animated').removeClass("to-animate");
                             }, k * 200, 'easeInOutExpo');
 
                         });
+
                     }, 200);
 
 
