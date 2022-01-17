@@ -29,11 +29,11 @@
 
 
                     setTimeout(function () {
-                        $('#home .to-animate,#callouts .to-animate').each(function (k) {
+                        $('#home .to-animate').each(function (k) {
                             var el = $(this);
 
                             setTimeout(function () {
-                                el.addClass('fadeInUp animated');
+                                el.addClass('zoomIn animated').removeClass("to-animate");
                             }, k * 200, 'easeInOutExpo');
 
                         });
